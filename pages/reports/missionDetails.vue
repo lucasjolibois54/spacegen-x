@@ -1,19 +1,23 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useMissionStore } from '~/stores/mission'
 
-const displayPage = ref(false)  // A reactive property that decides whether to display the page
+const missionStore = useMissionStore()
 
-// A reactive property for the mission name, description, and date
-const missionName = ref('')    // A reactive property for the mission name
-const missionDescription = ref('')
-const missionDate = ref('')  
+const displayPage = ref(false)
 
 onMounted(() => {
   const user = localStorage.getItem('validUser')
-
-  // If the key exists and its value isn't 'undefined', display the content
   displayPage.value = user && user !== 'undefined'
 })
+
+const saveMissionData = () => {
+  missionStore.setMissionData(missionName.value, missionDescription.value, missionDate.value)
+}
+
+const missionName = ref('')
+const missionDescription = ref('')
+const missionDate = ref('')
 </script>
 
 <template>
@@ -38,11 +42,11 @@ onMounted(() => {
       <input v-model="missionDate" type="date" id="missionDate" name="missionDate" class="mt-1 p-2 border rounded-md">
     </div>
 
-    <button class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white">Next Step</button>
+    <button @click="saveMissionData" class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white">Next Step</button>
   </div>
   <p class="text-red-500" v-else>Protected Route</p>
 </template>
 
 <style scoped>
-
+/* Add your specific styles if required */
 </style>
