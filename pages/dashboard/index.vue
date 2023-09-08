@@ -60,6 +60,7 @@ onMounted(async () => {
       <div v-for="report in reports" :key="report.id">
         <div class="flex space-x-5">
           <p>{{ report.missionName }}</p>
+          <p>{{ report.missionDate }}</p>
           <button class="bg-blue-500 px-2 py-1 rounded-md">Update</button>
           <button @click="deleteReport(report.id)" class="bg-red-500 px-2 py-1 rounded-md">Delete</button>
         </div>
