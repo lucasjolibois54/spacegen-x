@@ -64,3 +64,15 @@ const loginUser = () => {
 <style scoped>
 
 </style>
+
+
+<!--onMounted(async () => {
+    const { data, error } = await useFetch('/data/users/users.json')
+
+    if (error) {
+        console.error("Error loading users data:", error)
+    } else {
+        usersData.value = data
+    }
+})
+-->
