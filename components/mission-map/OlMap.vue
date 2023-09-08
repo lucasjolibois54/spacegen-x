@@ -111,7 +111,7 @@ onMounted(async () => {
           <input id="missionLatitude" type="text" v-model="missionLatitude" readonly />
         </div>
       <!-- <p><strong>Latitude:</strong> {{ issPosition.latitude }}</p> -->
-      <button @click="saveMissionData">Save Data</button>
+      <NuxtLink to="/reports/finalizeReport"><button @click="saveMissionData">Save Data</button></NuxtLink>
       </div>
     </div>
   </template>
