@@ -11,6 +11,33 @@ import { Vector as VectorLayer } from 'ol/layer';
 import { Vector as VectorSource } from 'ol/source';
 import { Icon, Style } from 'ol/style';
 
+//STORE & ROUTING
+import { useMissionStore } from '~/stores/mission'
+
+const missionStore = useMissionStore()
+
+const displayPage = ref(false)
+
+onMounted(() => {
+  const user = localStorage.getItem('validUser')
+  displayPage.value = user && user !== 'undefined'
+})
+
+/*const saveMissionData = () => {
+  missionStore.setMissionData(missionLongitude.value, missionLatitude.value)
+}*/
+
+const saveMissionData = () => {
+  missionStore.updateMissionCoordinates(missionLongitude.value, missionLatitude.value);
+}
+
+
+
+const missionLongitude = ref('')
+const missionLatitude = ref('')
+
+
+// MAP
 const mapContainer = ref(null);
 const issPosition = reactive({ longitude: null, latitude: null });
 
@@ -19,6 +46,11 @@ async function fetchIssPosition() {
   const data = await response.json();
   issPosition.longitude = data.longitude;
   issPosition.latitude = data.latitude;
+
+    // Assign fetched longitude and latitude to missionLongitude and missionLatitude
+    missionLongitude.value = data.longitude;
+  missionLatitude.value = data.latitude;
+  
   return [data.longitude, data.latitude];
 }
 
@@ -67,21 +99,24 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div>
+    <div v-if="displayPage"> 
       <div ref="mapContainer" class="map-container"></div>
       <div v-if="issPosition">
         <div>
-          <label for="longitude">Longitude:</label>
-          <input id="longitude" type="text" v-model="issPosition.longitude" readonly />
+          <label for="missionLongitude">Longitude:</label>
+          <input id="missionLongitude" type="text" v-model="missionLongitude" readonly />
         </div>
         <div>
-          <label for="latitude">Latitude:</label>
-          <input id="latitude" type="text" v-model="issPosition.latitude" readonly />
+          <label for="missionLatitude">Latitude:</label>
+          <input id="missionLatitude" type="text" v-model="missionLatitude" readonly />
         </div>
-      </div>
       <!-- <p><strong>Latitude:</strong> {{ issPosition.latitude }}</p> -->
+      <button @click="saveMissionData">Save Data</button>
+      </div>
     </div>
   </template>
+  
+  
 
 <style scoped>
 .map-container {
