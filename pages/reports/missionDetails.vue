@@ -42,7 +42,7 @@ const missionDate = ref('')
       <input v-model="missionDate" type="date" id="missionDate" name="missionDate" class="mt-1 p-2 border rounded-md">
     </div>
 
-    <button @click="saveMissionData" class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white">Next Step</button>
+    <NuxtLink to="/reports/missionImages"><button @click="saveMissionData" class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white">Next Step</button></NuxtLink>
   </div>
   <p class="text-red-500" v-else>Protected Route</p>
 </template>
