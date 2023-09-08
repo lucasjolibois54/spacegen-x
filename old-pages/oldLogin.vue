@@ -9,8 +9,7 @@ let usersData = [] // Array to store users' data fetched from the data.
 // Runs after component is mounted //gives the right time to fetch the data 
 onMounted(async () => {
     try {
-        // Fetch data from the provided API endpoint
-        const response = await fetch('https://spacegen-x-users.vercel.app/api/get-users')
+        const response = await fetch('/data/users/users.json')
         // Parse the JSON data and store it in the usersData array.
         usersData = await response.json()
     } catch (error) {
@@ -20,8 +19,8 @@ onMounted(async () => {
 
 const loginUser = () => {
     // Check if there's a user in usersData with the entered email and password.
-    const foundUser = usersData.find(user => user.email === email.value && user.password === password.value)
-
+    // user is temporarily used to store the user object from usersData array. UsersData is the entire array
+    const foundUser = usersData.find(user => user.email === email.value && user.password === password.value) // find function is used to usersData array to check if there's a user in Json (if nothing is found, find will become undefined)
     // If the user is found (valid login), store the email in local storage and alert the user.
     if (foundUser) {
         localStorage.setItem('validUser', email.value)
@@ -31,7 +30,6 @@ const loginUser = () => {
     }
 }
 </script>
-
 
 <template>
     <div class="min-h-screen flex items-center justify-center bg-gray-200 p-6">
