@@ -12,7 +12,7 @@ onMounted(() => {
 })
 
 const saveMissionData = () => {
-  missionStore.setMissionData(missionName.value, missionDescription.value, missionDate.value)
+  missionStore.updateMissionDetails(missionName.value, missionDescription.value, missionDate.value);
 }
 
 const missionName = ref('')
