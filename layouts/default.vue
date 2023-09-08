@@ -6,6 +6,7 @@
           <ul class="flex space-x-3">
             <li class="mt-2"><NuxtLink to="/">Home</NuxtLink></li>
             <li class="mt-2"><NuxtLink to="/dashboard">Dashboard</NuxtLink></li>
+            <li class=" btn !text-white"><NuxtLink to="/login">Login</NuxtLink></li>
           </ul>
         </nav>
       </header>
