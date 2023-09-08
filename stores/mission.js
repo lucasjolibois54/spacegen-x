@@ -6,6 +6,7 @@ export const useMissionStore = defineStore('mission', {
     missionName: '',
     missionDescription: '',
     missionDate: '',
+    missionImages: [],
     missionLongitude: '',
     missionLatitude: ''
   }),
@@ -24,6 +25,9 @@ export const useMissionStore = defineStore('mission', {
       this.missionDescription = description || this.missionDescription;
       this.missionDate = date || this.missionDate;
     },
+    updateMissionImages(images) {
+        this.missionImages = images || this.missionImages;
+      },
     updateMissionCoordinates(longitude, latitude) {
       this.missionLongitude = longitude || this.missionLongitude;
       this.missionLatitude = latitude || this.missionLatitude;
