@@ -5,13 +5,28 @@ export const useMissionStore = defineStore('mission', {
   state: () => ({
     missionName: '',
     missionDescription: '',
-    missionDate: ''
+    missionDate: '',
+    missionLongitude: '',
+    missionLatitude: ''
   }),
-  actions: {
-    setMissionData(name, description, date) {
+  /*actions: {
+    setMissionData(name, description, date, longitude, latitude) {
       this.missionName = name;
       this.missionDescription = description;
       this.missionDate = date;
+      this.missionLongitude = longitude;
+      this.missionLatitude = latitude;
+    }
+  }*/
+  actions: {
+    updateMissionDetails(name, description, date) {
+      this.missionName = name || this.missionName;
+      this.missionDescription = description || this.missionDescription;
+      this.missionDate = date || this.missionDate;
+    },
+    updateMissionCoordinates(longitude, latitude) {
+      this.missionLongitude = longitude || this.missionLongitude;
+      this.missionLatitude = latitude || this.missionLatitude;
     }
   }
 })
