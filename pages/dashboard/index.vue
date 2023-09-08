@@ -24,7 +24,7 @@ onMounted(() => {
         </div>
     </div>
     <div>
-        <button class="bg-blue-500 px-2 py-1 rounded-md">Create Report</button>
+        <NuxtLink to="/reports/missionDetails"><button class="bg-blue-500 px-2 py-1 rounded-md">Create Report</button></NuxtLink>
     </div>
   </div>
   <p class="text-red-500" v-else>Protected Route</p>
