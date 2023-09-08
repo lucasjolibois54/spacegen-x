@@ -58,8 +58,8 @@ onMounted(async () => {
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
   
       <div v-for="report in reports" :key="report.id">
-        <div class="flex space-x-5">
-            <p>#{{ report.id }}</p>
+        <div class="flex space-x-5 my-3">
+            <p>ID: #{{ report.id }}</p>
           <p>{{ report.missionName }}</p>
           <p>{{ report.missionDate }}</p>
           <button class="bg-blue-500 px-2 py-1 rounded-md">Update</button>
