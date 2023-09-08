@@ -7,7 +7,7 @@ onMounted(() => {
   const user = localStorage.getItem('validUser')
 
   // If the key exists and its value isn't 'undefined', display the content
-  displayPage.value = user && user !== 'undefined'
+  displayPage.value = user && user !== 'undefined' // sets the value of displayPage based on the condition provided. If user is not undefined, displayPage will be true
 })
 </script>
 
