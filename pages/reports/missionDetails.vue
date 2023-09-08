@@ -48,5 +48,4 @@ const missionDate = ref('')
 </template>
 
 <style scoped>
-/* Add your specific styles if required */
 </style>
