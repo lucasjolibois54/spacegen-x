@@ -10,15 +10,6 @@ export const useMissionStore = defineStore('mission', {
     missionLongitude: '',
     missionLatitude: ''
   }),
-  /*actions: {
-    setMissionData(name, description, date, longitude, latitude) {
-      this.missionName = name;
-      this.missionDescription = description;
-      this.missionDate = date;
-      this.missionLongitude = longitude;
-      this.missionLatitude = latitude;
-    }
-  }*/
   actions: {
     updateMissionDetails(name, description, date) {
       this.missionName = name || this.missionName;
@@ -31,6 +22,14 @@ export const useMissionStore = defineStore('mission', {
     updateMissionCoordinates(longitude, latitude) {
       this.missionLongitude = longitude || this.missionLongitude;
       this.missionLatitude = latitude || this.missionLatitude;
-    }
+    },
+    resetState() {
+        this.missionName = '';
+        this.missionDescription = '';
+        this.missionDate = '';
+        this.missionImages = [];
+        this.missionLongitude = '';
+        this.missionLatitude = '';
+      }
   }
 })
