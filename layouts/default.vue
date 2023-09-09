@@ -11,7 +11,8 @@
           </ul>
         </nav>
       </header>
-      <div class="container mx-auto p-4">
+      <!--<div class="container mx-auto p-4">-->
+        <div>
         <slot />
       </div>
     </div>
