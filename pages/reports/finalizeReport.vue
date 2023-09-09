@@ -9,8 +9,16 @@ const saveToLocalStorage = () => {
   const email = localStorage.getItem("validUser");
 
   // Generate an auto-incremented ID for localStorage
-  let id = 1; // start with 1
+ /* let id = 1; // start with 1
   while (localStorage.getItem(id.toString())) {
+    id++;
+  }*/
+
+    // If there's an ID in the store, use that ID
+  // Otherwise, generate an auto-incremented ID for localStorage
+  let id = missionStore.currentReportId ? missionStore.currentReportId : 1;
+
+  while (!missionStore.currentReportId && localStorage.getItem(id.toString())) {
     id++;
   }
 
