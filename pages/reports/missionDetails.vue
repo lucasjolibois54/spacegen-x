@@ -9,6 +9,11 @@ const displayPage = ref(false)
 onMounted(() => {
   const user = localStorage.getItem('validUser')
   displayPage.value = user && user !== 'undefined'
+
+  // Prefill the input fields with data from the Pinia store
+  missionName.value = missionStore.missionName
+  missionDescription.value = missionStore.missionDescription
+  missionDate.value = missionStore.missionDate
 })
 
 const saveMissionData = () => {
