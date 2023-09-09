@@ -1,6 +1,26 @@
 <script setup>
 import { ref, onMounted, reactive } from 'vue'
 
+
+import { useRouter } from 'vue-router';
+import { useMissionStore } from '~/stores/mission';
+
+const router = useRouter();
+const missionStore = useMissionStore();
+
+const updateReport = (id) => {
+  const storedReport = JSON.parse(localStorage.getItem(id));
+  
+  if(storedReport && storedReport.missionData) {
+    missionStore.populateStoreWithReport(storedReport.missionData);
+  }
+  
+  missionStore.setCurrentReportId(id);
+  router.push('/reports/missionDetails');
+};
+
+
+
 const displayPage = ref(false)
 const reports = reactive([])  // Store reports with associated ID for deletion purpose
 const currentUser = ref(null)
@@ -62,7 +82,7 @@ onMounted(async () => {
             <p>ID: #{{ report.id }}</p>
           <p>{{ report.missionName }}</p>
           <p>{{ report.missionDate }}</p>
-          <button class="bg-blue-500 px-2 py-1 rounded-md">Update</button>
+          <button @click="updateReport(report.id)" class="bg-blue-500 px-2 py-1 rounded-md">Update</button>
           <button @click="deleteReport(report.id)" class="bg-red-500 px-2 py-1 rounded-md">Delete</button>
         </div>
       </div>
