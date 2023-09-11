@@ -162,7 +162,7 @@
                 </li>
                 <li class="mr-2">
                   <NuxtLink
-                    to="/dashboard/myDrafts"
+                    to="/dashboard/draftedReports"
                     class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                     >My Drafts</NuxtLink
                   >
