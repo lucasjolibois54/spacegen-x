@@ -98,7 +98,7 @@ const toggleImageSelection = (img_src) => {
 
       <div class="flex mt-10">
   <!-- Left side for all images -->
-  <div class="w-1/2 mx-2">
+  <div class="w-1/2 md:mr-2 bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
     <div class="image-grid" v-if="imageData && imageData.photos">
       <div
         v-for="image in imageData.photos"
@@ -117,7 +117,7 @@ const toggleImageSelection = (img_src) => {
   
   <!-- Right side for selected images -->
   <div class="w-1/2 mx-2">
-    <div class="selected-image-grid">
+    <div class="selected-image-grid bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
       <div
         v-for="selectedImage in missionImages"
         :key="selectedImage"
