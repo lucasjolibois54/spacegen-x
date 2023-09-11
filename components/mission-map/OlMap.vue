@@ -104,11 +104,11 @@ onMounted(async () => {
       <div v-if="issPosition">
         <div>
           <label for="missionLongitude">Longitude:</label>
-          <input id="missionLongitude" type="text" v-model="missionLongitude" readonly />
+          <input class="bg-transparent" id="missionLongitude" type="text" v-model="missionLongitude" readonly />
         </div>
         <div>
           <label for="missionLatitude">Latitude:</label>
-          <input id="missionLatitude" type="text" v-model="missionLatitude" readonly />
+          <input class="bg-transparent" id="missionLatitude" type="text" v-model="missionLatitude" readonly />
         </div>
       <!-- <p><strong>Latitude:</strong> {{ issPosition.latitude }}</p> -->
       <NuxtLink to="/reports/finalizeReport"><button @click="saveMissionData">Save Data</button></NuxtLink>
