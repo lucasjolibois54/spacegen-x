@@ -87,16 +87,14 @@ const toggleImageSelection = (img_src) => {
 
   <!-- Main Content -->
   <div class="ml-20 md:ml-64 px-8 md:px-4 pb-8 w-full min-h-[calc(100vh-297px)]">
-      <!-- <h2 class="text-3xl font-semibold text-dashboard-title mt-12 mb-6">All My Space Reports</h2> -->
-      <section>
-        <div class="mt-16">
-                <p class="text-dashboard-gray mb-0">Step 2</p>
-                <h2 class="text-4xl font-semibold text-dashboard-title mb-0">Select Evidence</h2>
-            </div>
-        </section>
+    <section>
+  <div class="mt-16">
+    <p class="text-dashboard-gray mb-0">Step 2</p>
+    <h2 class="text-4xl font-semibold text-dashboard-title mb-0">Select Evidence</h2>
+  </div>
+</section>
 
-
-      <div class="flex mt-10">
+<div class="flex mt-10">
   <!-- Left side for all images -->
   <div class="w-1/2 md:mr-2 bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
     <div class="image-grid" v-if="imageData && imageData.photos">
@@ -108,7 +106,7 @@ const toggleImageSelection = (img_src) => {
       >
         <img
           :src="image.img_src"
-          alt="Mars Rover Image"
+          alt="Mission Image"
           class="mission-image"
         />
       </div>
@@ -117,27 +115,32 @@ const toggleImageSelection = (img_src) => {
   
   <!-- Right side for selected images -->
   <div class="w-1/2 mx-2">
-    <div class="selected-image-grid bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
+    <div 
+      v-if="missionImages && missionImages.length > 0"
+      class="selected-image-grid bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border"
+    >
       <div
         v-for="selectedImage in missionImages"
         :key="selectedImage"
       >
         <img
           :src="selectedImage"
-          alt="Selected Mars Rover Image"
+          alt="Selected  Mission Image"
         />
       </div>
     </div>
   </div>
 </div>
-  <NuxtLink to="/reports/missionISSPosition"
-    ><button
-      @click="saveMissionData"
-      class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white"
-    >
-      Next Step
-    </button></NuxtLink
+
+<NuxtLink to="/reports/missionISSPosition">
+  <button
+    @click="saveMissionData"
+    class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white"
   >
+    Next Step
+  </button>
+</NuxtLink>
+
 
 
       
