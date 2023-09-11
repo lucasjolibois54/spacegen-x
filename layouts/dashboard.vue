@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header class="shadow-sm bg-dashboard-nav">
-      <div class="">
+    <header class="shadow-sm bg-dashboard-nav ">
+      <div class="container mx-auto">
         <nav
-          class="container pl-20 md:pl-64 mx-auto pt-5 ml-28 px-8 flex justify-between"
+          class=" pl-20 md:pl-64 pt-5 md:ml-7 px-8 flex justify-between"
         >
         <div class="relative flex items-center">
             <!-- Input field -->
