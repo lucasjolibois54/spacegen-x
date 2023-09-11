@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  layout: "creatingreports",
+});
+
 import { ref, onMounted } from 'vue'
 import { useMissionStore } from '~/stores/mission'
 
@@ -26,8 +30,13 @@ const missionDate = ref('')
 </script>
 
 <template>
-  <div v-if="displayPage">
-    <h1 class="mt-20 text-4xl">Mission Details</h1>
+  <div class="px-8 pt-8 w-full" v-if="displayPage">
+    <section>
+        <div class="">
+                <p class="text-dashboard-gray mb-0">Step 1</p>
+                <h2 class="text-5xl font-semibold text-dashboard-title mb-0">Mission Details</h2>
+            </div>
+        </section>
 
     <!-- Mission Name Input -->
     <div class="mt-4">
