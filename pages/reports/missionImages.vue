@@ -132,7 +132,7 @@ const toggleImageSelection = (img_src) => {
         v-for="selectedImage in missionImages"
         :key="selectedImage"
       >
-        <img
+        <img class="rounded-lg"
           :src="selectedImage"
           alt="Selected Mission Image"
         />
