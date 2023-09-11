@@ -85,14 +85,14 @@ const missionDate = ref('')
 
       <div class="">
     <section>
-        <div class="mt-20">
+        <div class="mt-16">
                 <p class="text-dashboard-gray mb-0">Step 1</p>
                 <h2 class="text-5xl font-semibold text-dashboard-title mb-0">Mission Details</h2>
             </div>
         </section>
 
     <!-- Mission Name Input -->
-    <div class="mt-20">
+    <div class="mt-10">
       <label for="missionName" class="block text-sm font-medium text-gray-300">Mission Name</label>
       <input v-model="missionName" type="text" id="missionName" name="missionName" placeholder="Enter mission name..." class="mt-1 p-2 rounded-md w-full md:w-1/2 bg-dark-btn border-2 text-main-text border-dark-btn-border">
     </div>
