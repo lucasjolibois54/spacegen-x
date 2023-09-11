@@ -78,14 +78,14 @@ const missionDate = ref('')
   </div>
 
   <!-- Main Content -->
-  <div class=" px-8 md:px-4 pb-8 w-full min-h-[calc(100vh-297px)]">
+  <div class="ml-20 md:ml-64 px-8 md:px-4 pb-8 w-full min-h-[calc(100vh-297px)]">
       <!-- <h2 class="text-3xl font-semibold text-dashboard-title mt-12 mb-6">All My Space Reports</h2> -->
       
 
 
       <div class="">
     <section>
-        <div class="">
+        <div class="mt-20">
                 <p class="text-dashboard-gray mb-0">Step 1</p>
                 <h2 class="text-5xl font-semibold text-dashboard-title mb-0">Mission Details</h2>
             </div>
