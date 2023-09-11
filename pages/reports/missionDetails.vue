@@ -94,22 +94,22 @@ const missionDate = ref('')
     <!-- Mission Name Input -->
     <div class="mt-20">
       <label for="missionName" class="block text-sm font-medium text-gray-300">Mission Name</label>
-      <input v-model="missionName" type="text" id="missionName" name="missionName" placeholder="Enter mission name..." class="mt-1 p-2 rounded-md w-full md:w-1/2 bg-dark-btn border-2 border-dark-btn-border">
+      <input v-model="missionName" type="text" id="missionName" name="missionName" placeholder="Enter mission name..." class="mt-1 p-2 rounded-md w-full md:w-1/2 bg-dark-btn border-2 text-main-text border-dark-btn-border">
     </div>
 
     <!-- Mission Description Input -->
     <div class="mt-4">
       <label for="missionDescription" class="block text-sm font-medium text-gray-300">Mission Description</label>
-      <input v-model="missionDescription" type="text" id="missionDescription" name="missionDescription" placeholder="Enter mission description..." class="mt-1 p-2 rounded-md w-full md:w-1/2 pb-32 bg-dark-btn border-2 border-dark-btn-border">
+      <input v-model="missionDescription" type="text" id="missionDescription" name="missionDescription" placeholder="Enter mission description..." class="mt-1 p-2 rounded-md w-full md:w-1/2 pb-32 text-main-text bg-dark-btn border-2 border-dark-btn-border">
     </div>
 
     <!-- Mission Date Picker -->
     <div class="mt-4">
       <label for="missionDate" class="block text-sm font-medium text-gray-300">Mission Date</label>
-      <input v-model="missionDate" type="date" id="missionDate" name="missionDate" class="mt-1 p-2 text-dark-btn-text rounded-md bg-dark-btn border-2 border-dark-btn-border">
+      <input v-model="missionDate" type="date" id="missionDate" name="missionDate" class="mt-1 p-2 text-dark-btn-text rounded-md bg-dark-btn border-2 border-dark-btn-border fill-red-500">
     </div>
 
-    <NuxtLink to="/reports/missionImages"><button @click="saveMissionData" class="border-dark-btn-border flex items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md">Next Step →</button></NuxtLink>
+    <NuxtLink to="/reports/missionImages"><button @click="saveMissionData" class="border-dark-btn-border items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block">Next Step →</button></NuxtLink>
   </div>
 
 
