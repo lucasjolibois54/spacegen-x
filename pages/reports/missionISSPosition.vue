@@ -7,7 +7,7 @@ import OlMap from '@/components/mission-map/OlMap.vue';
 </script>
   <template>
     <ProtectedPage>
-  <div class="h-full bg-dark-bg flex">
+  <div class="h-full bg-dark-bg flex text-white">
     <!-- Sidebar -->
     <div class="bg-dashboard-nav border-r-2 border-dark-btn-border w-20 md:w-64 min-h-screen fixed left-0 top-0 flex flex-col justify-between p-2 md:p-4">
         
@@ -60,7 +60,7 @@ import OlMap from '@/components/mission-map/OlMap.vue';
   
   
         <div>
-      <h1>My OpenLayers Map</h1>
+      <!-- <h1>My OpenLayers Map</h1> -->
       <OlMap />
     </div>
   
