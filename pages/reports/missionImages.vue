@@ -88,16 +88,17 @@ const toggleImageSelection = (img_src) => {
   <!-- Main Content -->
   <div class="ml-20 md:ml-64 px-8 md:px-4 pb-8 w-full min-h-[calc(100vh-297px)]">
       <!-- <h2 class="text-3xl font-semibold text-dashboard-title mt-12 mb-6">All My Space Reports</h2> -->
-      
+      <section>
+        <div class="mt-16">
+                <p class="text-dashboard-gray mb-0">Step 2</p>
+                <h2 class="text-5xl font-semibold text-dashboard-title mb-0">Select Evidence</h2>
+            </div>
+        </section>
 
 
-      <div>
-    <h2>Mission Images</h2>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus dolorum
-      esse voluptatibus minima odio iste commodi cupiditate sed quidem incidunt?
-    </p>
-
+      <div class="flex mt-10">
+  <!-- Left side for all images -->
+  <div class="w-1/2 mx-2">
     <div class="image-grid" v-if="imageData && imageData.photos">
       <div
         v-for="image in imageData.photos"
@@ -113,6 +114,22 @@ const toggleImageSelection = (img_src) => {
       </div>
     </div>
   </div>
+  
+  <!-- Right side for selected images -->
+  <div class="w-1/2 mx-2">
+    <div class="selected-image-grid">
+      <div
+        v-for="selectedImage in missionImages"
+        :key="selectedImage"
+      >
+        <img
+          :src="selectedImage"
+          alt="Selected Mars Rover Image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
   <NuxtLink to="/reports/missionISSPosition"
     ><button
       @click="saveMissionData"
@@ -131,6 +148,12 @@ const toggleImageSelection = (img_src) => {
 
 <style scoped>
 .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.selected-image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
