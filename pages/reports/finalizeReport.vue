@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  layout: "creatingreports",
+});
+
 import { ref } from "vue";
 import { useMissionStore } from "~/stores/mission.js";
 
@@ -38,7 +42,7 @@ const saveToLocalStorage = (isDraft = false) => {
 </script>
 
 <template>
-  <div>
+  <div class="text-whites">
     <h1>{{ missionStore.missionName }}</h1>
     <p>{{ missionStore.missionDescription }}</p>
     <p>Date: {{ missionStore.missionDate }}</p>
