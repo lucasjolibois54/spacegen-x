@@ -127,8 +127,8 @@
                   </span></button
               ></NuxtLink>
             </li>
-            <li v-else class="btn !text-white">
-              <NuxtLink to="/login">Login</NuxtLink>
+            <li v-else>
+              <NuxtLink to="/login" class="border-dark-btn-border flex items-center justify-between border-2 w-full bg-dark-btn text-white p-2 rounded-md">Login</NuxtLink>
             </li>
           </ul>
         </nav>
