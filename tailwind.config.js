@@ -9,7 +9,32 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // colors
+        'main-color': '#EBFC68',
+        'dark-bg': '#0C0E10',
+        'dashboard-title': '#CECFC2',
+        'dashboard-gray': '#A0A4AC',
+        'dashboard-nav': '#121416',
+
+        // btn
+        'dark-btn': '#202427',
+        'dark-btn-border': '#2B2F35',
+        'dark-btn-text': '#C4C4C5',
+
+        // data
+        'dark-data-text': '#D0CECC',
+        'dark-data-title': '#908F8E',
+
+        'main-text': '#F6F6F6',
+        'sec-light-text': '#D2D6D7',
+        'cat-btn': '#232323',
+        'cat-text': '#7B7B7B',
+        'project-text': '#75757E',
+
+      },
+    },
   },
   plugins: [],
 }
