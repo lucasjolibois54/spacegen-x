@@ -100,7 +100,7 @@
               ></NuxtLink>
             </li>
             <li v-else>
-              <NuxtLink to="/login" class="border-dark-btn-border flex items-center justify-between border-2 w-full bg-dark-btn text-white p-2 rounded-md">Login</NuxtLink>
+              <NuxtLink to="/login" class="border-dark-btn-border flex items-center justify-between border-2 w-full bg-blue-500 text-white p-2 rounded-md px-5">Login</NuxtLink>
             </li>
           </ul>
         </nav>
