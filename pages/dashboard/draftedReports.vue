@@ -128,7 +128,7 @@ onMounted(async () => {
 
         <!-- Main Content -->
         <div class="ml-20 md:ml-64 px-8 md:px-4 pb-8 w-full min-h-[calc(100vh-297px)]">
-            <h2 class="text-3xl font-semibold text-dashboard-title mt-12 mb-6">All My Space Reports</h2>
+            <h2 class="text-3xl font-semibold text-dashboard-title mt-12 mb-6">All My Drafted Reports</h2>
             
             <!-- Reports Table -->
             <div class="overflow-x-auto">
