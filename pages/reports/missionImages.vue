@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  layout: "creatingreports",
+});
+
 import { ref } from "vue";
 
 //STORE & ROUTING
