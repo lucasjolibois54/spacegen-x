@@ -91,7 +91,7 @@ const toggleImageSelection = (img_src) => {
       <section>
         <div class="mt-16">
                 <p class="text-dashboard-gray mb-0">Step 2</p>
-                <h2 class="text-5xl font-semibold text-dashboard-title mb-0">Select Evidence</h2>
+                <h2 class="text-4xl font-semibold text-dashboard-title mb-0">Select Evidence</h2>
             </div>
         </section>
 
