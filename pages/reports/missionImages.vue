@@ -93,28 +93,32 @@ const toggleImageSelection = (img_src) => {
     <h2 class="text-4xl font-semibold text-dashboard-title mb-0">Select Evidence</h2>
   </div>
 </section>
-
 <div class="flex mt-10">
+  
   <!-- Left side for all images -->
-  <div class="w-1/2 md:mr-2 bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
-    <div class="image-grid" v-if="imageData && imageData.photos">
-      <div
-        v-for="image in imageData.photos"
-        :key="image.id"
-        @click="toggleImageSelection(image.img_src)"
-        :class="{ 'selected-image': missionImages.includes(image.img_src) }"
-      >
-        <img
-          :src="image.img_src"
-          alt="Mission Image"
-          class="mission-image"
-        />
+  <div class="w-1/2 md:mr-2">
+    <p class="mb-2 text-gray-400 font-semibold">All Available Images</p>
+    <div class="bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
+      <div class="image-grid" v-if="imageData && imageData.photos">
+        <div
+          v-for="image in imageData.photos"
+          :key="image.id"
+          @click="toggleImageSelection(image.img_src)"
+          :class="{ 'selected-image': missionImages.includes(image.img_src) }"
+        >
+          <img
+            :src="image.img_src"
+            alt="Mission Image"
+            class="mission-image"
+          />
+        </div>
       </div>
     </div>
   </div>
   
   <!-- Right side for selected images -->
   <div class="w-1/2 mx-2">
+    <p v-if="missionImages && missionImages.length > 0" class="mb-2 text-gray-400 font-semibold">Selected Images</p>
     <div 
       v-if="missionImages && missionImages.length > 0"
       class="selected-image-grid bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border"
@@ -125,11 +129,12 @@ const toggleImageSelection = (img_src) => {
       >
         <img
           :src="selectedImage"
-          alt="Selected  Mission Image"
+          alt="Selected Mission Image"
         />
       </div>
     </div>
   </div>
+  
 </div>
 
 <NuxtLink to="/reports/missionISSPosition">
@@ -140,6 +145,7 @@ const toggleImageSelection = (img_src) => {
     Next Step
   </button>
 </NuxtLink>
+
 
 
 
