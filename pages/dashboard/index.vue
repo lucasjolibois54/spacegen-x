@@ -3,6 +3,8 @@ definePageMeta({
   layout: "dashboard",
 });
 
+import ProtectedPage from '@/components/main/ProtectedPage.vue';
+
 import { ref, onMounted, reactive } from 'vue'
 import LogoutDashboard from '~/components/main/LogoutDashboard.vue'
 
@@ -69,7 +71,8 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="h-full bg-dark-bg flex" v-if="displayPage">
+        <ProtectedPage>
+    <div class="h-full bg-dark-bg flex">
         <!-- Sidebar -->
         <div class="bg-dashboard-nav border-r-2 border-dark-btn-border w-20 md:w-64 min-h-screen fixed left-0 top-0 flex flex-col justify-between p-2 md:p-4">
             
@@ -155,8 +158,7 @@ onMounted(async () => {
             </div>
         </div>
     </div>
-
-    <p class="text-center mt-10 text-red-500" v-else>Protected Route</p>
+</ProtectedPage>
 </template>
 
 <style scoped>
