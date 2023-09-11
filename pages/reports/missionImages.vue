@@ -181,10 +181,11 @@ const toggleImageSelection = (img_src) => {
 }
 
 .mission-image:hover {
-  transform: scale(1.1); /* zoom the image a bit on hover */
+  transform: scale(1.03); /* zoom the image a bit on hover */
 }
 
 .selected-image {
-  border: 3px solid blue; /* a border to indicate the image is selected */
+  border: 3px solid rgb(212, 206, 206); /* a border to indicate the image is selected */
+  border-radius: 10px;
 }
 </style>
