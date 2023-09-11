@@ -32,7 +32,7 @@ const loginUser = () => {
 </script>
 
 <template>
-    <div class="min-h-screen flex items-center justify-center p-6">
+    <div class=" min-h-[calc(100vh-137px)] flex items-center justify-center p-6">
         <div class=" bg-dark-btn border-2 border-dark-btn-border p-8 rounded shadow-md w-96">
             <h1 class="text-2xl mb-4 text-main-text">Login</h1>
 
