@@ -4,20 +4,13 @@ import { useMissionStore } from "~/stores/mission.js";
 
 const missionStore = useMissionStore();
 
-const saveToLocalStorage = () => {
+const saveToLocalStorage = (isDraft = false) => {
   // Fetch validUser value from localStorage
   const email = localStorage.getItem("validUser");
 
-  // Generate an auto-incremented ID for localStorage
- /* let id = 1; // start with 1
-  while (localStorage.getItem(id.toString())) {
-    id++;
-  }*/
-
-    // If there's an ID in the store, use that ID
+  // If there's an ID in the store, use that ID
   // Otherwise, generate an auto-incremented ID for localStorage
   let id = missionStore.currentReportId ? missionStore.currentReportId : 1;
-
   while (!missionStore.currentReportId && localStorage.getItem(id.toString())) {
     id++;
   }
@@ -32,6 +25,7 @@ const saveToLocalStorage = () => {
       missionImages: missionStore.missionImages,
       missionLongitude: missionStore.missionLongitude,
       missionLatitude: missionStore.missionLatitude,
+      savedAsDraft: isDraft  // <-- Added savedAsDraft property
     },
   };
 
@@ -63,8 +57,24 @@ const saveToLocalStorage = () => {
       </div>
       <p v-else>No images selected.</p>
     </div>
-    <NuxtLink to="/dashboard"
-      ><button @click="saveToLocalStorage">Save</button></NuxtLink
-    >
+
+    <!-- Save as draft button -->
+    <NuxtLink to="/dashboard">
+    <button @click="() => saveToLocalStorage(true)">Save Draft</button>
+    </NuxtLink>
+    <!-- Save button -->
+    <NuxtLink to="/dashboard">
+      <button @click="() => saveToLocalStorage(false)">Save</button>
+    </NuxtLink>
   </div>
 </template>
+
+
+
+<!--
+      // Generate an auto-incremented ID for localStorage
+ /* let id = 1; // start with 1
+  while (localStorage.getItem(id.toString())) {
+    id++;
+  }*/
+-->
