@@ -6,6 +6,20 @@ definePageMeta({
 import { ref } from "vue";
 import { useMissionStore } from "~/stores/mission.js";
 
+import { computed } from "vue";
+
+const isDataComplete = computed(() => {
+  return (
+    missionStore.missionName &&
+    missionStore.missionDescription &&
+    missionStore.missionDate &&
+    missionStore.missionLongitude &&
+    missionStore.missionLatitude &&
+    missionStore.missionImages.length > 0
+  );
+});
+
+
 const missionStore = useMissionStore();
 
 const saveToLocalStorage = (isDraft = false) => {
@@ -115,14 +129,14 @@ const saveToLocalStorage = (isDraft = false) => {
       <p v-else>No images selected.</p>
     </div>
 
-    <!-- Save as draft button -->
-    <NuxtLink to="/dashboard">
-    <button @click="() => saveToLocalStorage(true)">Save Draft</button>
-    </NuxtLink>
-    <!-- Save button -->
-    <NuxtLink to="/dashboard">
-      <button @click="() => saveToLocalStorage(false)">Save</button>
-    </NuxtLink>
+<!-- Save as draft button -->
+<NuxtLink to="/dashboard">
+  <button :disabled="!isDataComplete" @click="() => saveToLocalStorage(true)">Save Draft</button>
+</NuxtLink>
+<!-- Save button -->
+<NuxtLink to="/dashboard">
+  <button :disabled="!isDataComplete" @click="() => saveToLocalStorage(false)">Save</button>
+</NuxtLink>
   </div>
 
 
