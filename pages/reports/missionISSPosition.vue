@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  layout: "creatingreports",
+});
+
 import OlMap from '@/components/mission-map/OlMap.vue';
 </script>
 <template>
