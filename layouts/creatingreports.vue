@@ -148,23 +148,30 @@
               <ul class="flex flex-wrap -mb-px">
                 <li class="mr-2">
                   <NuxtLink
-                    to="/dashboard"
+                    to="/reports/missionDetails"
                     class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                    >All Reports</NuxtLink
+                    >1.- Mission Details</NuxtLink
                   >
                 </li>
                 <li class="mr-2">
                   <NuxtLink
-                    to="/dashboard/savedReports"
+                    to="/reports/missionImages"
                     class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                    >Saved Reports</NuxtLink
+                    >2.- Mission Evidence</NuxtLink
                   >
                 </li>
                 <li class="mr-2">
                   <NuxtLink
-                    to="/dashboard/draftedReports"
+                    to="/reports/missionISSPosition"
                     class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                    >My Drafts</NuxtLink
+                    >3.- ISS Coordinates </NuxtLink
+                  >
+                </li>
+                <li class="mr-2">
+                  <NuxtLink
+                    to="/reports/finalizeReport"
+                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                    >3.- Report Sumary </NuxtLink
                   >
                 </li>
               </ul>
