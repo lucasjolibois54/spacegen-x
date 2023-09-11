@@ -29,12 +29,17 @@ const { data: imageData } = useFetch(
 const missionImages = ref([]); // ref to hold the selected images
 
 const toggleImageSelection = (img_src) => {
+  // Check if the image is already selected
   if (missionImages.value.includes(img_src)) {
     missionImages.value = missionImages.value.filter((img) => img !== img_src);
   } else {
-    missionImages.value.push(img_src);
+    // If the number of selected images is less than 7, add the new image to the list
+    if (missionImages.value.length < 7) {
+      missionImages.value.push(img_src);
+    }
   }
 };
+
 </script>
 
 <template>
