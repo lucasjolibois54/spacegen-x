@@ -99,15 +99,15 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div v-if="displayPage"> 
+    <div class="py-3 px-3 bg-dark-btn border-2 border-dark-btn-border rounded-md mt-10" v-if="displayPage"> 
       <div ref="mapContainer" class="map-container"></div>
       <div v-if="issPosition">
-        <div>
-          <label for="missionLongitude">Longitude:</label>
+        <div class="mt-3">
+          <label for="missionLongitude">Longitude: </label>
           <input class="bg-transparent" id="missionLongitude" type="text" v-model="missionLongitude" readonly />
         </div>
         <div>
-          <label for="missionLatitude">Latitude:</label>
+          <label for="missionLatitude">Latitude: </label>
           <input class="bg-transparent" id="missionLatitude" type="text" v-model="missionLatitude" readonly />
         </div>
       <!-- <p><strong>Latitude:</strong> {{ issPosition.latitude }}</p> -->
