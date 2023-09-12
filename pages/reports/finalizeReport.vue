@@ -65,27 +65,32 @@ const saveToLocalStorage = (isDraft = false) => {
   <div class="ml-20 md:ml-64 px-8 md:px-4 pb-8 w-full min-h-[calc(100vh-297px)]">
       <!-- <h2 class="text-3xl font-semibold text-dashboard-title mt-12 mb-6">All My Space Reports</h2> -->
       
+      <section>
+        <div class="mt-16">
+                <p class="text-dashboard-gray mb-0">Mission Summary</p>
+                <h2 class="text-4xl font-semibold text-dashboard-title mb-0">{{ missionStore.missionName }}</h2>
+            </div>
+        </section>
 
-
-      <div class="text-white">
-    <h1>{{ missionStore.missionName }}</h1>
-    <p>{{ missionStore.missionDescription }}</p>
+      <div class="text-white mt-5">
+    <p>Description: {{ missionStore.missionDescription }}</p>
     <p>Date: {{ missionStore.missionDate }}</p>
     <p>Longitude: {{ missionStore.missionLongitude }}</p>
     <p>Latitude: {{ missionStore.missionLatitude }}</p>
 
-    <div>
-      <h2>Selected Images:</h2>
-      <div v-if="missionStore.missionImages.length">
-        <img
-          v-for="(imgSrc, index) in missionStore.missionImages"
-          :key="index"
-          :src="imgSrc"
-          alt="Mission Image"
-        />
-      </div>
-      <p v-else>No images selected.</p>
-    </div>
+    <div class="mt-10">
+            <h2 class="text-2xl font-semibold mb-4 text-dashboard-title">Selected Images:</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" v-if="missionStore.missionImages.length">
+              <img
+                v-for="(imgSrc, index) in missionStore.missionImages"
+                :key="index"
+                :src="imgSrc"
+                alt="Mission Image"
+                class="w-full rounded-lg shadow hover:shadow-lg transition-shadow"
+              />
+            </div>
+            <p v-else class="italic">No images selected.</p>
+          </div>
 
 <!-- Save as draft button -->
 <NuxtLink to="/dashboard">
