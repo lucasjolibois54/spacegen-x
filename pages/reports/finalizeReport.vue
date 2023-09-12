@@ -72,11 +72,11 @@ const saveToLocalStorage = (isDraft = false) => {
             </div>
         </section>
 
-      <div class="text-white mt-5">
-    <p>Description: {{ missionStore.missionDescription }}</p>
-    <p>Date: {{ missionStore.missionDate }}</p>
-    <p>Longitude: {{ missionStore.missionLongitude }}</p>
-    <p>Latitude: {{ missionStore.missionLatitude }}</p>
+      <div class="text-gray-300 mt-5">
+    <p><b>Description:</b> {{ missionStore.missionDescription }}</p>
+    <p><b>Date:</b> {{ missionStore.missionDate }}</p>
+    <p><b>Longitude:</b> {{ missionStore.missionLongitude }}</p>
+    <p><b>Latitude:</b> {{ missionStore.missionLatitude }}</p>
 
     <div class="mt-10">
             <h2 class="text-2xl font-semibold mb-4 text-dashboard-title">Selected Images:</h2>
