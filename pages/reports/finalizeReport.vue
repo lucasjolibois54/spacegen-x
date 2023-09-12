@@ -67,7 +67,7 @@ const saveToLocalStorage = (isDraft = false) => {
       
       <section>
         <div class="mt-16">
-                <p class="text-dashboard-gray mb-0">Mission Summary</p>
+                <p class="text-dashboard-gray mb-0">Report Summary</p>
                 <h2 class="text-4xl font-semibold text-dashboard-title mb-0">{{ missionStore.missionName }}</h2>
             </div>
         </section>
