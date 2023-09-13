@@ -14,13 +14,15 @@ import { useMissionStore } from '~/stores/mission';
 const router = useRouter();
 const missionStore = useMissionStore();
 
+// Function to update a report based on its ID
 const updateReport = (id) => {
-  const storedReport = JSON.parse(localStorage.getItem(id));
+  const storedReport = JSON.parse(localStorage.getItem(id)); // Retrieve the report from local storage using its ID
   
   if(storedReport && storedReport.missionData) {
     missionStore.populateStoreWithReport(storedReport.missionData);
   }
   
+    // Set the current report ID in the mission store and redirect to mission details page
   missionStore.setCurrentReportId(id);
   router.push('/reports/missionDetails');
 };
@@ -42,6 +44,7 @@ async function fetchUserData(email) {
     }
 }
 
+// Function to delete a report from local storage
 function deleteReport(reportId) {
     localStorage.removeItem(reportId)
     const index = reports.findIndex(report => report.id === reportId)
@@ -51,20 +54,25 @@ function deleteReport(reportId) {
 }
 
 onMounted(async () => {
+    // Check for a valid user in local storage
   const user = localStorage.getItem('validUser')
-  displayPage.value = user && user !== 'undefined'
+  displayPage.value = user && user !== 'undefined' //check if user exists
 
+  // If 'displayPage.value' is true (meaning there's a valid user):
   if (displayPage.value) {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i)
-      if (key !== 'validUser') {
+    // Checks if the current key is NOT 'validUser' (meaning it's looking at data other than the currently logged-in user)
+      if (key !== 'validUser') { 
+        // Fetches the data associated with the current key and parses it from JSON format to a JavaScript object
         const storedData = JSON.parse(localStorage.getItem(key))
         if (storedData && storedData.email === user) {
+        // It pushes the mission data associated with the stored data to the 'reports' array, adding an 'id' property which is the key of this item in local storage.
           reports.push({ ...storedData.missionData, id: key })
         }
       }
     }
-
+    // Calls the 'fetchUserData' function, passing the currently logged-in user's email (or identifier) as an argument to fetch more detailed user data. Once fetched, this data is stored in the 'currentUser' reactive property.
     currentUser.value = await fetchUserData(user)
   }
 })
