@@ -12,6 +12,15 @@ import Sidebar from "~/components/dashboard/Sidebar.vue";
 const missionStore = useMissionStore();
 
 const displayPage = ref(false);
+const currentPage = ref(1);
+const imagesPerPage = 6;
+
+
+const loadMoreImages = () => {
+  currentPage.value += 1;
+};
+
+
 
 onMounted(() => {
   missionImages.value = [...missionStore.missionImages];
@@ -65,7 +74,7 @@ const toggleImageSelection = (img_src) => {
     <div class="bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
       <div class="columns-2 space-y-4" v-if="imageData && imageData.photos">
         <div class=""
-          v-for="image in imageData.photos"
+          v-for="image in imageData.photos.slice(0, currentPage * imagesPerPage)"
           :key="image.id"
           @click="toggleImageSelection(image.img_src)"
           :class="{ 'selected-image': missionImages.includes(image.img_src) }"
@@ -101,17 +110,23 @@ const toggleImageSelection = (img_src) => {
   
 </div>
 
+<div class="flex mt-6 gap-x-3">
 <NuxtLink to="/reports/missionISSPosition">
   <button
     @click="saveMissionData"
-    class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block"
+    class="border-dark-btn-border px-6 items-center justify-between border-2 bg-blue-500 text-white p-2 rounded-md inline-block"
   >
     Next Step
   </button>
 </NuxtLink>
 
 
-
+<div v-if="imageData.photos.length > currentPage * imagesPerPage">
+  <button @click="loadMoreImages"  class="border-dark-btn-border px-6 items-center justify-between border-2 bg-dark-btn text-white p-2 rounded-md inline-block">
+    Load More
+  </button>
+</div>
+</div>
 
       
   </div>
