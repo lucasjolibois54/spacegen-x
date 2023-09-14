@@ -54,7 +54,7 @@ onMounted(async () => {
                                 <img :src="report.missionData.missionImages[0]" alt="Mission Image" class="w-10 h-10 rounded">
                             </td>
                             <td class="px-4 py-2">{{ report.missionData.missionName }}</td>
-                            <td class="px-4 py-2 hidden md:table-cell">{{ report.missionData.missionDescription.substring(0, 10) }}...</td>
+                            <td class="px-4 py-2 hidden md:table-cell">{{ report.missionData.missionDescription.substring(0, 25) }}...</td>
                             <td class="px-4 py-2 hidden md:table-cell">
                                 {{ parseFloat(report.missionData.missionLongitude).toFixed(2) }}, {{ parseFloat(report.missionData.missionLatitude).toFixed(2) }}
                             </td>
