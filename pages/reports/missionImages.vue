@@ -63,8 +63,8 @@ const toggleImageSelection = (img_src) => {
   <div class="w-1/2 md:mr-2">
     <p class="mb-2 text-gray-400 font-semibold">All Available Images</p>
     <div class="bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border">
-      <div class="image-grid" v-if="imageData && imageData.photos">
-        <div
+      <div class="columns-2 space-y-4" v-if="imageData && imageData.photos">
+        <div class=""
           v-for="image in imageData.photos"
           :key="image.id"
           @click="toggleImageSelection(image.img_src)"
@@ -85,7 +85,7 @@ const toggleImageSelection = (img_src) => {
     <p v-if="missionImages && missionImages.length > 0" class="mb-2 text-gray-400 font-semibold">Selected Images</p>
     <div 
       v-if="missionImages && missionImages.length > 0"
-      class="selected-image-grid bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border"
+      class="selected-image-grid columns-2 space-y-4 bg-dark-btn py-4 px-4 rounded-xl border-2 border-dark-btn-border"
     >
       <div
         v-for="selectedImage in missionImages"
@@ -120,17 +120,17 @@ const toggleImageSelection = (img_src) => {
 </template>
 
 <style scoped>
-.image-grid {
+/* .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
-}
+} */
 
-.selected-image-grid {
+/* .selected-image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
-}
+} */
 
 .mission-image {
   width: 100%;
