@@ -1,9 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-
 definePageMeta({
   layout: "dashboard",
 });
+
+import { ref, onMounted } from 'vue';
 
 import ProtectedPage from '@/components/main/ProtectedPage.vue';
 import Sidebar from '~/components/dashboard/Sidebar.vue';
