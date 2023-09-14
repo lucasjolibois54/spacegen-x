@@ -17,13 +17,13 @@
                     <!-- Icon for smaller screens -->
                     <span class="md:hidden">📄</span>
                     <!-- Text for larger screens -->
-                    <span class="hidden md:block ml-3">Dashboard</span>
+                    <span class="hidden md:block ml-3">All My Reports</span>
                 </NuxtLink>
                 <NuxtLink to="/dashboard/publicReports" class="text-dark-btn-text border-2 border-dark-btn-border text-center mt-1 bg-dark-btn px-2 py-2 rounded-md flex md:px-4 md:py-2">
                     <!-- Icon for smaller screens -->
                     <span class="md:hidden">📄</span>
                     <!-- Text for larger screens -->
-                    <span class="hidden md:block ml-3">Public Reports</span>
+                    <span class="hidden md:block ml-3">All Public Reports</span>
                 </NuxtLink>
             </div>
         </div>
