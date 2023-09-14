@@ -7,8 +7,8 @@
             <!-- Input field -->
             <input
               type="text"
-              placeholder="Search for a report..."
-              class="pl-10 pr-4 py-2 rounded-md bg-[#606060]/70 placeholder-[#CECFC2] text-[#CECFC2]"
+              placeholder="Search for a public report..."
+              class="pl-10 pr-4 py-2 w-72 rounded-md bg-[#606060]/70 placeholder-[#CECFC2] text-[#CECFC2]"
             />
 
             <!-- Search Icon-->
