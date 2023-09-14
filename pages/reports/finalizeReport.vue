@@ -92,14 +92,17 @@ const saveToLocalStorage = (isDraft = false) => {
             <p v-else class="italic">No images selected.</p>
           </div>
 
-<!-- Save as draft button -->
-<NuxtLink to="/dashboard">
-  <button :disabled="!isDataComplete" @click="() => saveToLocalStorage(true)">Save Draft</button>
-</NuxtLink>
+<div class="flex gap-4">
 <!-- Save button -->
-<NuxtLink to="/dashboard">
+<NuxtLink to="/dashboard"
+class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block">
   <button :disabled="!isDataComplete" @click="() => saveToLocalStorage(false)">Save</button>
 </NuxtLink>
+<!-- Save as draft button -->
+<NuxtLink to="/dashboard"
+class="border-dark-btn-border items-center justify-between border-2 mt-6 bg-dark-btn text-white p-2 rounded-md inline-block">
+  <button :disabled="!isDataComplete" @click="() => saveToLocalStorage(true)">Save Draft</button>
+</NuxtLink></div>
   </div>
 
 
