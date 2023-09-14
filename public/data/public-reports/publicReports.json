@@ -4,7 +4,7 @@
         "email": "test1@test.com",
         "missionData": {
             "missionName": "Mission 30533",
-            "missionDescription": "Terraform planet 80x5-y",
+            "missionDescription": "The core objective of Mission 30533 was to initiate the terraforming procedures on planet 80x5-y. Recognizing the vast potential of the planet to support human life, our team's focus was to create a controlled, sustainable environment suitable for long-term habitation. The mission primarily revolved around deploying atmospheric processors to elevate oxygen levels, and extensive geological surveys were conducted to identify the most viable regions for future colonies. The uploaded image provides a glimpse into the untouched beauty of planet 80x5-y.",
             "missionDate": "2023-09-07",
             "missionImages": [
                 "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398830889EDR_F0030004NCAM00113M_.JPG"
@@ -19,7 +19,7 @@
         "email": "test2@test.com",
         "missionData": {
             "missionName": "Mission 30534",
-            "missionDescription": "Study asteroid A7-B",
+            "missionDescription": "Mission 30534 embarked on a revolutionary journey to study asteroid A7-B. With the increasing interest in asteroid mining and its implications on the Earth's economy, A7-B was identified as a prime candidate due to its rich composition of precious metals and rare minerals. Over the course of the mission, our team deployed advanced drilling mechanisms to extract samples from the asteroid's core. Detailed spectral analysis was conducted to estimate the composition and potential economic value. The accompanying images capture the majestic presence of A7-B against the vast backdrop of space.",
             "missionDate": "2023-09-08",
             "missionImages": [
                 "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398826118EDR_F0030004CCAM04015M_.JPG",
@@ -35,7 +35,7 @@
         "email": "test3@test.com",
         "missionData": {
             "missionName": "Mission 30535",
-            "missionDescription": "Explore moon Zeta-3",
+            "missionDescription": "Moon Zeta-3, with its unique geological formations and enigmatic atmosphere, was the target of Mission 30535. Our exploratory team set out to uncover the mysteries hidden beneath its surface. Using state-of-the-art rovers and aerial drones, the team mapped the moon's intricate cave systems and studied the volatile gas emissions from its geysers. One of the mission's significant discoveries was the identification of potential water reservoirs deep below the moon's crust, pointing towards the possibility of life. The attached image showcases one of the sprawling landscapes of Zeta-3, hinting at the moon's untapped potential.",
             "missionDate": "2023-09-09",
             "missionImages": [
                 "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831390EDR_F0030044NCAM00131M_.JPG"
