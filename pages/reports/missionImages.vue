@@ -120,17 +120,6 @@ const toggleImageSelection = (img_src) => {
 </template>
 
 <style scoped>
-/* .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-} */
-
-/* .selected-image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-} */
 
 .mission-image {
   width: 100%;
