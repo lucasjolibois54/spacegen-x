@@ -113,7 +113,7 @@ onMounted(async () => {
       <!-- <p><strong>Latitude:</strong> {{ issPosition.latitude }}</p> -->
       <NuxtLink to="/reports/finalizeReport"
       class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block">
-      <button @click="saveMissionData">Next</button></NuxtLink>
+      <button @click="saveMissionData">Next Step</button></NuxtLink>
       </div>
     </div>
   </template>

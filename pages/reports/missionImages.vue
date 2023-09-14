@@ -104,7 +104,7 @@ const toggleImageSelection = (img_src) => {
 <NuxtLink to="/reports/missionISSPosition">
   <button
     @click="saveMissionData"
-    class="mt-4 bg-blue-500 px-2 py-1 rounded-md text-white"
+    class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block"
   >
     Next Step
   </button>

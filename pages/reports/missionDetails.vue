@@ -67,7 +67,7 @@ const missionDate = ref('')
       <input v-model="missionDate" type="date" id="missionDate" name="missionDate" class="mt-1 p-2 text-dark-btn-text rounded-md bg-dark-btn border-2 border-dark-btn-border fill-red-500">
     </div>
 
-    <NuxtLink to="/reports/missionImages"><button @click="saveMissionData" class="border-dark-btn-border items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block">Next Step →</button></NuxtLink>
+    <NuxtLink to="/reports/missionImages"><button @click="saveMissionData" class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block">Next Step</button></NuxtLink>
   </div>
 
 
