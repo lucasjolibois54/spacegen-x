@@ -41,7 +41,12 @@ const filteredReports = computed(() => {
 <template>
     <div class="relative">
         <!-- Input field -->
-        <input v-model="searchQuery" @focus="inputFocused = true" @blur="inputFocused = false" placeholder="Search for a report..." class="pl-10 pr-4 py-2 w-72 rounded-md bg-[#606060]/70 placeholder-[#CECFC2] text-[#CECFC2]" />
+        <input 
+    v-model="searchQuery" 
+    @focus="inputFocused = true" 
+    @blur="inputFocused = false" 
+    placeholder="Search for a report..." 
+    class="pl-10 pr-4 py-2 w-72 rounded-md bg-[#606060]/70 placeholder-[#CECFC2] text-[#CECFC2] outline-none" />
 
         <!-- Search Icon -->
         <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#CECFC2]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
