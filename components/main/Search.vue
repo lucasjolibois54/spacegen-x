@@ -55,7 +55,7 @@ const highlightMatch = (text) => {
         <input v-model="searchQuery" 
                @focus="inputFocused = true" 
                @blur="inputFocused = false" 
-               placeholder="Search for a report..." 
+               placeholder="Search for a public report..." 
                class="pl-10 pr-4 py-2 w-72 rounded-md bg-[#606060]/70 placeholder-[#CECFC2] text-[#CECFC2] outline-none" />
 
         <!-- Search Icon -->
