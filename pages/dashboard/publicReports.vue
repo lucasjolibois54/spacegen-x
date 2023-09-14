@@ -44,6 +44,7 @@ onMounted(async () => {
                             <th class="px-4 py-2 hidden md:table-cell">Description</th>
                             <th class="px-4 py-2 hidden md:table-cell">ISS Coordinates</th>
                             <th class="px-4 py-2 hidden md:table-cell">Date</th>
+                            <th class="px-4 py-2 hidden md:table-cell">View</th>
                         </tr>
                     </thead>
                     <tbody class="text-dark-data-text">
@@ -58,6 +59,7 @@ onMounted(async () => {
                                 {{ parseFloat(report.missionData.missionLongitude).toFixed(2) }}, {{ parseFloat(report.missionData.missionLatitude).toFixed(2) }}
                             </td>
                             <td class="px-4 py-2 hidden md:table-cell">{{ report.missionData.missionDate }}</td>
+                            <td class="px-4 py-2">View</td>
                         </tr>
                     </tbody>
 
