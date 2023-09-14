@@ -57,7 +57,7 @@ const filteredReports = computed(() => {
         </svg>
 
         <!-- Display filtered reports -->
-        <ul v-if="filteredReports.length" class="absolute left-0 w-full bg-black/30 backdrop-blur-lg border border-dark-btn-border z-10 rounded-b-md">
+        <ul v-if="filteredReports.length" class="absolute rounded-t-md left-0 w-full bg-black/30 backdrop-blur-lg border border-dark-btn-border z-10 rounded-b-md">
             <li v-for="report in filteredReports" :key="report.id" class="text-main-text px-4 py-2 hover:bg-black border-t-2 border-b-2 border-transparent hover:border-dark-btn-border">
                 {{ report.missionData.missionName }}
             </li>
