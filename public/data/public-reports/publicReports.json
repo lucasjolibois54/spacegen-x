@@ -1,0 +1,45 @@
+[
+    {
+        "email": "test1@test.com",
+        "missionData": {
+            "missionName": "Mission 30533",
+            "missionDescription": "Terraform planet 80x5-y",
+            "missionDate": "2023-09-07",
+            "missionImages": [
+                "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398830889EDR_F0030004NCAM00113M_.JPG"
+            ],
+            "missionLongitude": -94.957925897891,
+            "missionLatitude": -16.425080503814,
+            "savedAsDraft": true
+        }
+    },
+    {
+        "email": "test2@test.com",
+        "missionData": {
+            "missionName": "Mission 30534",
+            "missionDescription": "Study asteroid A7-B",
+            "missionDate": "2023-09-08",
+            "missionImages": [
+                "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398826118EDR_F0030004CCAM04015M_.JPG",
+                "http://mars.jpl.nasa.gov/msl-raw-images/ods/surface/sol/00015/soas/rdr/ccam/CR0_398825899PRC_F0030004CCAM03015L1.PNG"
+            ],
+            "missionLongitude": 95.236987,
+            "missionLatitude": 15.480903,
+            "savedAsDraft": false
+        }
+    },
+    {
+        "email": "test3@test.com",
+        "missionData": {
+            "missionName": "Mission 30535",
+            "missionDescription": "Explore moon Zeta-3",
+            "missionDate": "2023-09-09",
+            "missionImages": [
+                "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831390EDR_F0030044NCAM00131M_.JPG"
+            ],
+            "missionLongitude": -45.214789,
+            "missionLatitude": 24.587430,
+            "savedAsDraft": false
+        }
+    }
+]
