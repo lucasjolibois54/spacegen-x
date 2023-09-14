@@ -46,7 +46,7 @@ const loginUser = () => {
                     class="mt-1 p-2 w-full border rounded-md bg-[#606060]/70 text-main-text">
             </div>
 
-            <div class="mb-6">
+            <div class="mb-2">
                 <label for="password" class="block text-sm font-medium text-gray-400">Password</label>
                 <input 
                     type="password" 
@@ -55,7 +55,7 @@ const loginUser = () => {
                     placeholder="Password" 
                     class="mt-1 p-2 w-full border rounded-md bg-[#606060]/70 text-[#CECFC2]">
             </div>
-
+            <p class="mb-5 text-blue-500 text-xsm">Do you want to test the Software?</p>
             <NuxtLink to="/dashboard"><button @click="loginUser" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Login</button></NuxtLink>
         </div>
     </div>
