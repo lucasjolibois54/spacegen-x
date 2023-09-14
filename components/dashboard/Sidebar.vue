@@ -83,5 +83,8 @@ export default {
 </script>
 
 <style scoped>
-    /* You can add your sidebar specific styles here */
+.router-link-exact-active {
+  color: white;
+  background: rgb(1, 1, 1);
+}
 </style>
