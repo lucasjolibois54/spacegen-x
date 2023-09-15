@@ -1,14 +1,18 @@
-<template>
+<template class="">
     <div class="text-main-text">
-      <p>Report ID: {{ $route.params.id }}</p>
       <div v-if="report">
-        <h2>{{ report.missionData.missionName }}</h2>
-        <p>{{ report.missionData.missionDescription }}</p>
+        <div class="flex justify-between">
+        <p>Report ID: #{{ $route.params.id }}</p><p>Author: {{ report.author }}</p></div>
+
+        <div class="mt-36 text-center">
+        <h2 class="text-5xl font-semibold text-dashboard-title mb-0">{{ report.missionData.missionName }}</h2>
         <div v-for="img in report.missionData.missionImages" :key="img">
-          <img :src="img" alt="Mission Image" />
+          <img class="absolute left-1/2 transform -translate-x-1/2 w-2/3 max-h-[70vh] object-cover rounded-md mt-5" :src="img" alt="Mission Image" />
+        </div>
+        <p>{{ report.missionData.missionDescription }}</p>
         </div>
       </div>
-      <p v-else>No report found for this ID.</p>
+      <p v-else>No report found for the ID #{{ $route.params.id }}.</p>
     </div>
   </template>
   
