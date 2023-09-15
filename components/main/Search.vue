@@ -75,7 +75,7 @@ const highlightMatch = (text) => {
         <!-- Display filtered reports -->
         <ul v-if="inputFocused" class="absolute top-full left-0 w-full bg-black/30 backdrop-blur-lg border border-dark-btn-border z-10 rounded-b-md">
             <li v-for="report in filteredReports" :key="report.id" class="">
-                <NuxtLink class=" py-2" :to="`/dashboard/public-reports/${report.id}`" >
+                <NuxtLink class=" py-2 w-full" :to="`/dashboard/public-reports/${report.id}`" >
                 <div class="text-main-text px-4 py-2 hover:bg-black border-t-2 border-b-2 border-transparent hover:border-dark-btn-border">
                 <span v-html="highlightMatch(report.missionData.missionName)"></span>
                 <td class="px-4 float-right">#{{ report.id }}</td>
