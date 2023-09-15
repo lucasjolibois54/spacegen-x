@@ -7,7 +7,6 @@ import { ref, onMounted } from 'vue';
 
 import ProtectedPage from '@/components/main/ProtectedPage.vue';
 import Sidebar from '~/components/dashboard/Sidebar.vue';
-import LogoutDashboard from '~/components/main/LogoutDashboard.vue';
 
 const reports = ref([]); // Use a reactive reference to store the reports
 
