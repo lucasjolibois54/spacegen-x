@@ -58,7 +58,7 @@ onMounted(async () => {
                                 {{ parseFloat(report.missionData.missionLongitude).toFixed(2) }}, {{ parseFloat(report.missionData.missionLatitude).toFixed(2) }}
                             </td>
                             <td class="px-4 py-2 hidden md:table-cell">{{ report.missionData.missionDate }}</td>
-                            <td class="px-4 py-2">View</td>
+                            <NuxtLink :to="`/dashboard/public-reports/${report.id}`"><td class="px-4 py-2">View</td></NuxtLink>
                         </tr>
                     </tbody>
 
