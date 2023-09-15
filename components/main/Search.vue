@@ -6,6 +6,12 @@ const reports = ref([]);
 const searchQuery = ref('');
 const inputFocused = ref(false);
 
+const handleBlur = () => {
+    setTimeout(() => {
+        inputFocused.value = false;
+    }, 150);
+}
+
 // Load data on component mount
 onMounted(async () => {
     try {
@@ -54,7 +60,7 @@ const highlightMatch = (text) => {
         <!-- Input field -->
         <input v-model="searchQuery" 
                @focus="inputFocused = true" 
-               @blur="inputFocused = false" 
+               @blur="handleBlur"
                placeholder="Search for a public report..." 
                class="pl-10 pr-4 py-2 w-72 rounded-md bg-[#606060]/70 placeholder-[#CECFC2] text-[#CECFC2] outline-none" />
 
@@ -69,7 +75,8 @@ const highlightMatch = (text) => {
         <!-- Display filtered reports -->
         <ul v-if="inputFocused" class="absolute top-full left-0 w-full bg-black/30 backdrop-blur-lg border border-dark-btn-border z-10 rounded-b-md">
             <li v-for="report in filteredReports" :key="report.id" class="text-main-text px-4 py-2 hover:bg-black border-t-2 border-b-2 border-transparent hover:border-dark-btn-border">
-                <span v-html="highlightMatch(report.missionData.missionName)"></span>
+                <NuxtLink :to="`/dashboard/public-reports/${report.id}`" ><span v-html="highlightMatch(report.missionData.missionName)"></span>
+                <td class="px-4 float-right">#{{ report.id }}</td></NuxtLink>
             </li>
         </ul>
     </div>
