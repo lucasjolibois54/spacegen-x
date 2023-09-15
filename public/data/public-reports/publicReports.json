@@ -2,6 +2,7 @@
     {
         "id": 909,
         "email": "jane.doe@test.com",
+        "author": "Jane Doe",
         "missionData": {
             "missionName": "Terraforming 80x5-y",
             "missionDescription": "The core objective of Mission 30533 was to initiate the terraforming procedures on planet 80x5-y...",
@@ -15,6 +16,7 @@
     {
         "id": 1001,
         "email": "john.doe@test.com",
+        "author": "John Doe",
         "missionData": {
             "missionName": "Asteroid Study",
             "missionDescription": "Mission 30534 embarked on a revolutionary journey to study asteroid A7-B...",
@@ -31,6 +33,7 @@
     {
         "id": 203,
         "email": "sarah.connor@test.com",
+        "author": "Sarah Connor",
         "missionData": {
             "missionName": "Moon Exploration",
             "missionDescription": "Moon Zeta-3, with its unique geological formations...",
@@ -44,6 +47,7 @@
     {
         "id": 204,
         "email": "mark.smith@test.com",
+        "author": "Mark Smith",
         "missionData": {
             "missionName": "Triton Geysers",
             "missionDescription": "Exploration of Neptune's icy moon Triton revealed potential geysers...",
@@ -57,6 +61,7 @@
     {
         "id": 205,
         "email": "emma.watson@test.com",
+        "author": "Emma Watson",
         "missionData": {
             "missionName": "Asteroid Belt",
             "missionDescription": "Voyage through the asteroid belt to understand the origins of these rocky bodies...",
@@ -70,6 +75,7 @@
     {
         "id": 218,
         "email": "lucas.brown@test.com",
+        "author": "Lucas Brown",
         "missionData": {
             "missionName": "Gamma-Ray Study",
             "missionDescription": "Satellite launch to observe gamma-ray bursts in distant galaxies...",
@@ -83,6 +89,7 @@
         {
             "id": 219,
             "email": "amy.peters@test.com",
+            "author": "Amy Peters",
             "missionData": {
                 "missionName": "Galactic Clouds",
                 "missionDescription": "Investigation of interstellar clouds to understand star formation processes...",
@@ -96,6 +103,7 @@
         {
             "id": 220,
             "email": "michael.jordan@test.com",
+            "author": "Michael Jordan",
             "missionData": {
                 "missionName": "Venus Analysis",
                 "missionDescription": "Exploring the acidic clouds of Venus to study its greenhouse effect...",
@@ -109,6 +117,7 @@
         {
             "id": 221,
             "email": "rebecca.norman@test.com",
+            "author": "Rebecca Norman",
             "missionData": {
                 "missionName": "Sun Flares",
                 "missionDescription": "Studying the sun's coronal mass ejections and their effects on Earth's magnetic field...",
@@ -122,6 +131,7 @@
         {
             "id": 222,
             "email": "william.gates@test.com",
+            "author": "William Gates",
             "missionData": {
                 "missionName": "Andromeda Voyage",
                 "missionDescription": "Journey to our neighboring Andromeda galaxy to gather data on its spiral structure...",
@@ -135,6 +145,7 @@
         {
             "id": 223,
             "email": "olivia.martin@test.com",
+            "author": "Olivia Martin",
             "missionData": {
                 "missionName": "Black Hole",
                 "missionDescription": "Deep space mission to study the event horizon of a distant black hole...",
@@ -148,6 +159,7 @@
         {
             "id": 224,
             "email": "noah.jones@test.com",
+            "author": "Noah Jones",
             "missionData": {
                 "missionName": "Orion Nebula",
                 "missionDescription": "Research on the Orion Nebula to comprehend the birth of stars...",
@@ -161,6 +173,7 @@
         {
             "id": 225,
             "email": "ava.taylor@test.com",
+            "author": "Ava Taylor",
             "missionData": {
                 "missionName": "Saturn Rings",
                 "missionDescription": "In-depth analysis of Saturn's rings and their potential origins...",
@@ -174,6 +187,7 @@
         {
             "id": 226,
             "email": "liam.jackson@test.com",
+            "author": "Liam Jackson",
             "missionData": {
                 "missionName": "Mars Caves",
                 "missionDescription": "Exploring underground caves of Mars for signs of ancient life...",
@@ -187,6 +201,7 @@
         {
             "id": 227,
             "email": "mia.thompson@test.com",
+            "author": "Mia Thompson",
             "missionData": {
                 "missionName": "Jupiter Storms",
                 "missionDescription": "Studying the persistent storms on Jupiter and their effects on the planet's atmosphere...",
@@ -200,6 +215,7 @@
         {
             "id": 228,
             "email": "isaac.wilson@test.com",
+            "author": "Isaac Wilson",
             "missionData": {
                 "missionName": "Deep Space Anomalies",
                 "missionDescription": "Mission to identify and understand the unknown anomalies detected in deep space...",
