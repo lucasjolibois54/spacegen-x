@@ -16,7 +16,7 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <div class=" w-auto rounded-full absolute float-right -bottom-1 -right-2 bg-blue-500/50 backdrop-blur-lg px-2 py-1 text-xsm">2</div>
+                <div class=" w-auto rounded-full absolute float-right -bottom-1 -right-2 bg-blue-500/50 backdrop-blur-sm cursor-pointer px-2 py-1 text-xsm">2</div>
             </div>
     </div>
 </template>
