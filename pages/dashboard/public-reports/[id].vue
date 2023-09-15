@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="text-main-text">
       <p>Report ID: {{ $route.params.id }}</p>
       <div v-if="report">
         <h2>{{ report.missionData.missionName }}</h2>
@@ -25,7 +25,7 @@
 
       onMounted(async () => {
         try {
-          const response = await fetch('http://localhost:3000/data/public-reports/publicReports.json/');
+          const response = await fetch('/data/public-reports/publicReports.json/');
           if (!response.ok) throw new Error('Failed to fetch reports');
           const reports = await response.json();
           report.value = reports.find(r => r.id === reportId);
