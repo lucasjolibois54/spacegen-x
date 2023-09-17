@@ -58,7 +58,7 @@ const missionDate = ref('')
     <!-- Mission Description Input -->
     <div class="mt-4">
       <label for="missionDescription" class="block text-sm font-medium text-gray-300">Mission Description</label>
-      <input v-model="missionDescription" type="text" id="missionDescription" name="missionDescription" placeholder="Enter mission description..." class="mt-1 p-2 rounded-md w-full md:w-1/2 pb-32 text-main-text bg-dark-btn border-2 border-dark-btn-border">
+      <textarea v-model="missionDescription" type="text" id="missionDescription" name="missionDescription" placeholder="Enter mission description..." class="mt-1 p-2 rounded-md w-full md:w-1/2 pb-32 text-main-text bg-dark-btn border-2 border-dark-btn-border"></textarea>
     </div>
 
     <!-- Mission Date Picker -->
