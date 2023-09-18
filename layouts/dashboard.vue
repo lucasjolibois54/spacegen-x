@@ -7,8 +7,6 @@
         >
         <div class="relative flex items-center">
           <Search/>
-            <!-- notification -->
-            <Notifications/>
           </div>
           
           <ul class="flex space-x-3">
@@ -41,38 +39,6 @@
                   </span></button
               ></NuxtLink>
             </li>
-
-            <!-- <li class="!text-white">
-              <button
-                @click="handleLogout"
-                class="border-dark-btn-border flex items-center justify-between border-2 w-full bg-dark-btn text-white p-2 rounded-md"
-              >
-                <span class="pr-3">Export</span>
-                <span>
-                  <svg
-                    width="15"
-                    height="18"
-                    viewBox="0 0 15 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_24_3006)">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M11.0566 7.14844H8.97367L7.50073 9.32373L6.02633 7.14844H3.94344L6.44027 10.8867L3.62311 15.0439H7.50073V13.6318H6.72843L7.50073 12.4746L9.21502 15.0439H11.3769L8.55973 10.8867L11.0566 7.14844ZM15 18H0V0H11.3593L15 3.87158V18ZM13.7801 16.708V4.74023H10.4627V1.14697H1.23306V16.708H13.7801Z"
-                        fill="#C4C4C5"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_24_3006">
-                        <rect width="15" height="18" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-              </button>
-            </li> -->
             <li v-if="isLoggedIn" class="!text-white">
               <NuxtLink to="/login">
                 <button
