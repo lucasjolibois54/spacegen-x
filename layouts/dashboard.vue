@@ -42,7 +42,7 @@
               ></NuxtLink>
             </li>
 
-            <li class="!text-white">
+            <!-- <li class="!text-white">
               <button
                 @click="handleLogout"
                 class="border-dark-btn-border flex items-center justify-between border-2 w-full bg-dark-btn text-white p-2 rounded-md"
@@ -72,7 +72,7 @@
                   </svg>
                 </span>
               </button>
-            </li>
+            </li> -->
             <li v-if="isLoggedIn" class="!text-white">
               <NuxtLink to="/login">
                 <button
