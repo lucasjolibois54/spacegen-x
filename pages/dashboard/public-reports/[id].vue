@@ -6,9 +6,14 @@
 
         <div class="mt-36 text-center md:w-2/3 mx-auto">
         <h2 class="text-5xl font-semibold text-dashboard-title mb-0">{{ report.missionData.missionName }}</h2>
-        <div v-for="img in report.missionData.missionImages" :key="img">
+        <!-- <div v-for="img in report.missionData.missionImages" :key="img">
           <img class="relative left-1/2 transform -translate-x-1/2 max-h-[70vh] w-full object-cover rounded-md mt-5" :src="img" alt="Mission Image" />
-        </div>
+        </div> -->
+        <img 
+          v-if="report.missionData.missionImages && report.missionData.missionImages.length"
+          class="relative left-1/2 transform -translate-x-1/2 max-h-[70vh] w-full object-cover rounded-md mt-5" 
+          :src="report.missionData.missionImages[0]" 
+          alt="Mission Image" />
         <p class="text-left mt-10 text-gray-300">{{ report.missionData.missionDescription }}</p>
         </div>
       </div>
