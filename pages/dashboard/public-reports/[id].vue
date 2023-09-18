@@ -4,10 +4,10 @@
         <div class="flex justify-between">
         <p>Report ID: #{{ $route.params.id }}</p><p>Author: {{ report.author }}</p></div>
 
-        <div class="mt-36 text-center">
+        <div class="mt-36 text-center md:w-2/3 mx-auto">
         <h2 class="text-5xl font-semibold text-dashboard-title mb-0">{{ report.missionData.missionName }}</h2>
         <div v-for="img in report.missionData.missionImages" :key="img">
-          <img class="relative left-1/2 transform -translate-x-1/2 w-2/3 max-h-[70vh] w-full object-cover rounded-md mt-5" :src="img" alt="Mission Image" />
+          <img class="relative left-1/2 transform -translate-x-1/2 max-h-[70vh] w-full object-cover rounded-md mt-5" :src="img" alt="Mission Image" />
         </div>
         <p class="text-left mt-10 text-gray-300">{{ report.missionData.missionDescription }}</p>
         </div>
