@@ -2,34 +2,11 @@
     <section class="relative">
         <div class="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
             <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
-                <defs >
-                    <!-- Gradient for the circles -->
-                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="circle-gradient">
-                        <stop stopColor="#FFFFFF" offset="0%" />
-                        <stop stopColor="#E0E0E0" offset="100%" />
-                    </linearGradient>
+    <circle cx="1232" cy="128" r="128" fill="#FFFFFF" />
+    <circle cx="155" cy="443" r="64" fill="#FFFFFF" />
+</svg>
 
-                    <!-- Inner shadow filter -->
-                    <filter id="inner-shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feComponentTransfer in="SourceAlpha">
-                            <feFuncA type="table" tableValues="0 0 1 0" />
-                        </feComponentTransfer>
-                        <feGaussianBlur stdDeviation="3"/>
-                        <feOffset dx="2" dy="2" result="offsetblur"/>
-                        <feFlood floodColor="black" result="color"/>
-                        <feComposite in2="offsetblur" operator="in"/>
-                        <feComposite in2="SourceAlpha" operator="in"/>
-                        <feMerge>
-                            <feMergeNode in="SourceGraphic"/>
-                            <feMergeNode/>
-                        </feMerge>
-                    </filter>
-                </defs>
-                <circle cx="1232" cy="128" r="128" fill="url(#circle-gradient)" filter="url(#inner-shadow)" />
-                <circle cx="155" cy="443" r="64" fill="url(#circle-gradient)" filter="url(#inner-shadow)" />
-            </svg>
         </div>
-
 
 
       <!-- Hero content -->
