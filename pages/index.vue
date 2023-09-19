@@ -1,11 +1,11 @@
 
     <template>  
         <Hero/>
-        <ModalVideo/>
+        <SubHero/>
   </template>
   
   <script setup>
   import Hero from '~/components/home/Hero.vue';
-  import ModalVideo from '~/components/home/ModalVideo.vue';
+  import SubHero from '~/components/home/SubHero.vue';
   </script>
   
