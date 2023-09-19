@@ -5,23 +5,23 @@
                 <defs >
                     <!-- Gradient for the circles -->
                     <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="circle-gradient">
-                        <stop stopColor="#F5F5F5" offset="0%" />
+                        <stop stopColor="#FFFFFF" offset="0%" />
                         <stop stopColor="#E0E0E0" offset="100%" />
                     </linearGradient>
 
                     <!-- Inner shadow filter -->
-                    <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="inner-shadow">
+                    <filter id="inner-shadow" x="-50%" y="-50%" width="200%" height="200%">
                         <feComponentTransfer in="SourceAlpha">
                             <feFuncA type="table" tableValues="0 0 1 0" />
                         </feComponentTransfer>
-                        <feGaussianBlur stdDeviation="3" />
-                        <feOffset dx="2" dy="2" result="offsetblur" />
-                        <feFlood floodColor="black" result="color" />
-                        <feComposite in2="offsetblur" operator="in" />
-                        <feComposite in2="SourceAlpha" operator="in" />
+                        <feGaussianBlur stdDeviation="3"/>
+                        <feOffset dx="2" dy="2" result="offsetblur"/>
+                        <feFlood floodColor="black" result="color"/>
+                        <feComposite in2="offsetblur" operator="in"/>
+                        <feComposite in2="SourceAlpha" operator="in"/>
                         <feMerge>
-                            <feMergeNode in="SourceGraphic" />
-                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic"/>
+                            <feMergeNode/>
                         </feMerge>
                     </filter>
                 </defs>
@@ -31,12 +31,13 @@
         </div>
 
 
+
       <!-- Hero content -->
       <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-12 md:pt-40 md:pb-20">
         <!-- Section header -->
         <div class="text-center pb-12 md:pb-16 max-w-4xl mx-auto">
-          <h1 class="!text-8xl text-gray-100 md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Space Insights on <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Demand</span></h1>
-          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="zoom-y-out" data-aos-delay="150">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+          <h1 class="!text-8xl text-main-text md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Space Insights on <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Demand</span></h1>
+          <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto" data-aos="zoom-y-out" data-aos-delay="150">Discover deep insights about space with just a few clicks. Our platform is optimized for all devices, ensuring you have a seamless experience every time.</p>
           <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
             <div class="flex gap-4">
             <!-- Save button -->
