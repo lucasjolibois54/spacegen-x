@@ -36,14 +36,30 @@
         <!-- Section header -->
         <div class="text-center pb-12 md:pb-16 max-w-4xl mx-auto">
           <h1 class="!text-8xl text-gray-100 md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Space Insights on <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Demand</span></h1>
-          <p class="text-xl text-gray-300 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="zoom-y-out" data-aos-delay="150">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
           <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
-            <div>
-              <a class="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
-            </div>
-            <div>
-              <a class="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
-            </div>
+            <div class="flex gap-4">
+            <!-- Save button -->
+            <NuxtLink
+              to="/login"
+              class="border-dark-btn-border px-6 items-center justify-between border-2 bg-blue-500 text-white p-2 rounded-md inline-block"
+            >
+              <button
+              >
+                Try For Free
+              </button>
+            </NuxtLink>
+            <!-- Save as draft button -->
+            <NuxtLink
+              to="/login"
+              class="border-dark-btn-border px-10 items-center justify-between border-2 bg-dark-btn text-white p-2 rounded-md inline-block"
+            >
+              <button
+              >
+                Login
+              </button>
+            </NuxtLink>
+          </div>
           </div>
         </div>
   
