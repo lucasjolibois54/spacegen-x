@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="shadow-sm bg-dashboard-nav ">
+    <header class="shadow-sm bg-dashboard-nav hidden md:block">
       <div class="container mx-auto">
         <nav
           class=" pl-20 md:pl-64 pt-5 md:ml-7 px-8 flex justify-between"
