@@ -8,8 +8,8 @@
           @click="setActiveComponent('ComponentA')"
           class="p-4 cursor-pointer border-2 border-dark-btn-border bg-dark-btn rounded-xl text-white my-2 overflow-hidden"
         >
-        <h4 class="text-main-text font-bold">
-            A look into our top performing astronaut!
+        <h4 class="text-main-text font-bold sm:mr-7">
+            <span class="hidden sm:block">A look into our</span> <span class="sm:hidden">Our</span> top performing astronaut!
         </h4>
         <div class="flex items-start relative">
             <p :class="{'max-h-0': !isActive('ComponentA'), 'max-h-[100vh]': isActive('ComponentA')}" class="text-xsm mt-2 text-gray-400 mr-10 transition-all duration-500 overflow-hidden">
@@ -30,7 +30,7 @@
           How our Software help astronauts!
         </h4>
         <div class="flex items-start relative">
-            <p :class="{'max-h-0': !isActive('ComponentB'), 'max-h-[100vh]': isActive('ComponentB')}" class="text-xsm mt-2 text-gray-400 mr-6 transition-all duration-500 overflow-hidden">
+            <p :class="{'max-h-0': !isActive('ComponentB'), 'max-h-[100vh]': isActive('ComponentB')}" class="text-xsm mt-2 text-gray-400 mr-10 transition-all duration-500 overflow-hidden">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             </p>
             <div :class="{'rotate-90': isActive('ComponentB'), 'translate-y-[-1rem]': !isActive('ComponentB'), 'ml-auto': true}" class="-mt-3 bg-dark-btn-border px-2 py-2 rounded-md border-2 border-[#626873] flex items-center justify-center flex-shrink-0 transition-all duration-500 absolute right-0">
@@ -48,7 +48,7 @@
           The story of Anabelle Marino.
         </h4>
         <div class="flex items-start relative">
-            <p :class="{'max-h-0': !isActive('ComponentC'), 'max-h-[100vh]': isActive('ComponentC')}" class="text-xsm mt-2 text-gray-400 mr-6 transition-all duration-500 overflow-hidden">
+            <p :class="{'max-h-0': !isActive('ComponentC'), 'max-h-[100vh]': isActive('ComponentC')}" class="text-xsm mt-2 text-gray-400 mr-10 transition-all duration-500 overflow-hidden">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             </p>
             <div :class="{'rotate-90': isActive('ComponentC'), 'translate-y-[-1rem]': !isActive('ComponentC'), 'ml-auto': true}" class="-mt-3 bg-dark-btn-border px-2 py-2 rounded-md border-2 border-[#626873] flex items-center justify-center flex-shrink-0 transition-all duration-500 absolute right-0">
@@ -66,7 +66,7 @@
           Learn more about our goals.
         </h4>
         <div class="flex items-start relative">
-            <p :class="{'max-h-0': !isActive('ComponentD'), 'max-h-[100vh]': isActive('ComponentD')}" class="text-xsm mt-2 text-gray-400 mr-6 transition-all duration-500 overflow-hidden">
+            <p :class="{'max-h-0': !isActive('ComponentD'), 'max-h-[100vh]': isActive('ComponentD')}" class="text-xsm mt-2 text-gray-400 mr-10 transition-all duration-500 overflow-hidden">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             </p>
             <div :class="{'rotate-90': isActive('ComponentD'), 'translate-y-[-1rem]': !isActive('ComponentD'), 'ml-auto': true}" class="-mt-3 bg-dark-btn-border px-2 py-2 rounded-md border-2 border-[#626873] flex items-center justify-center flex-shrink-0 transition-all duration-500 absolute right-0">
