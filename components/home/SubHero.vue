@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-5xl mx-auto mt-32 pt-0">
       <h1 class="!text-8xl text-main-text md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Gain Insightful<span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400"><br/>Content Highlights</span></h1>
-    <div class="grid grid-cols-2 gap-4"  data-aos="zoom-y-out">
+    <div class="grid grid-rows-2 sm:grid-cols-2 gap-4"  data-aos="zoom-y-out">
       <!-- Left Column for clickable divs -->
       <div class="">
         <div 
