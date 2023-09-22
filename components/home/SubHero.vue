@@ -8,8 +8,8 @@
           @click="setActiveComponent('ComponentA')"
           class="p-4 cursor-pointer border-2 border-dark-btn-border bg-dark-btn rounded-xl text-white my-2 overflow-hidden"
         >
-        <h4 class="text-main-text font-bold sm:mr-7">
-            <span class="hidden sm:block">A look into our</span> <span class="sm:hidden">Our</span> top performing astronaut!
+        <h4 class="text-main-text font-bold sm:mr-7 flex">
+            <span class="hidden sm:block">A look into our </span> <span class="sm:hidden">Our </span>&nbsp; top performing astronaut!
         </h4>
         <div class="flex items-start relative">
             <p :class="{'max-h-0': !isActive('ComponentA'), 'max-h-[100vh]': isActive('ComponentA')}" class="text-xsm mt-2 text-gray-400 mr-10 transition-all duration-500 overflow-hidden">
