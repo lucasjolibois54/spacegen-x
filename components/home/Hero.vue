@@ -43,10 +43,8 @@
   
         <!-- Hero image and modal trigger -->
         <div class="relative flex justify-center mb-8" data-aos="fade-up" data-aos-delay="50">
-          <!-- Your Image and SVG components go here -->
           <img :src="VideoThumb" alt="Modal video thumbnail" class="w-2/3 rounded shadow-lg cursor-pointer" @click="openModal = true">
           <button class="absolute top-full flex items-center transform -translate-y-1/2 bg-white rounded-full font-medium group p-4 shadow-lg" @click="openModal = true">
-            <!-- Your SVG goes here -->
             <span class="ml-3">Watch the full video (2 min)</span>
           </button>
         </div>
