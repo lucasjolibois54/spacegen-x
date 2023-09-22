@@ -20,3 +20,15 @@ body {
     @apply p-3 rounded-md bg-white shadow-md h-full;
   }
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
