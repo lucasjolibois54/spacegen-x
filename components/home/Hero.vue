@@ -76,6 +76,5 @@
   </script>
   
   <style scoped>
-    /* Tailwind styles (if any) */
   </style>
   
