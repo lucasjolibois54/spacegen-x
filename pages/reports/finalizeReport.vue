@@ -101,30 +101,25 @@ const saveToLocalStorage = (isDraft = false) => {
           </div>
 
           <div class="flex gap-4">
-            <!-- Save button -->
-            <NuxtLink
-              to="/dashboard"
-              class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block"
-            >
-              <button
-                :disabled="!isDataComplete"
-                @click="() => saveToLocalStorage(false)"
-              >
-                Save
-              </button>
-            </NuxtLink>
-            <!-- Save as draft button -->
-            <NuxtLink
-              to="/dashboard"
-              class="border-dark-btn-border items-center justify-between border-2 mt-6 bg-dark-btn text-white p-2 rounded-md inline-block"
-            >
-              <button
-                :disabled="!isDataComplete"
-                @click="() => saveToLocalStorage(true)"
-              >
-                Save Draft
-              </button>
-            </NuxtLink>
+          
+            <div v-if="!isDataComplete" class="mt-4 text-red-500">
+              Please fill and save all fields.
+            </div>
+            <div v-else class="flex gap-4">
+              <!-- Save button -->
+              <NuxtLink to="/dashboard" class="border-dark-btn-border px-6 items-center justify-between border-2 mt-6 bg-blue-500 text-white p-2 rounded-md inline-block">
+                <button @click="() => saveToLocalStorage(false)">
+                  Save
+                </button>
+              </NuxtLink>
+              <!-- Save as draft button -->
+              <NuxtLink to="/dashboard" class="border-dark-btn-border items-center justify-between border-2 mt-6 bg-dark-btn text-white p-2 rounded-md inline-block">
+                <button @click="() => saveToLocalStorage(true)">
+                  Save Draft
+                </button>
+              </NuxtLink>
+            </div>
+
           </div>
         </div>
       </div>
