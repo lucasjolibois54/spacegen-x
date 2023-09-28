@@ -1,14 +1,17 @@
 <template>
+  <!-- <iframe src='https://my.spline.design/galaxy-882b20eb3a0b0cab0c6ebd90e1795de0/' class="absolute w-screen h-screen left-0 right-0 -z-10 top-0" frameborder='0' width='100%' height='100%'></iframe> -->
+  <!-- <iframe src='https://my.spline.design/galaxy-8a398d032ec920c41dadcc5ed039c816/' frameborder='0' class="absolute w-screen h-screen left-0 right-0 -z-10 top-0" ></iframe> -->
+  
+  <iframe src='https://my.spline.design/interactivespaceshipscene-754e43e86a5d4256974e4e33bd78ec44/' frameborder='0' class="absolute top-0 left-0 w-full h-full pointer-events-auto -z-10"></iframe>
+
     <section class="relative">
-        <div class="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
+        <!-- <div class="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
             <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
     <circle cx="1232" cy="128" r="128" fill="#FFFFFF" />
     <circle cx="155" cy="443" r="64" fill="#FFFFFF" />
 </svg>
 
-        </div>
-
-
+        </div> -->
       <!-- Hero content -->
       <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-12 md:pt-40 md:pb-20">
         <!-- Section header -->
@@ -61,7 +64,8 @@
         </div>
       </div>
     </section>
-  </template>
+    <!-- <iframe src='https://my.spline.design/planetcopy-f7fc69dde6ac70bcbb3a574c2a782d9d/' frameborder='0' width='100%' height='500px'></iframe>     -->
+    </template>
   
   <script setup>
   import { ref } from 'vue'
