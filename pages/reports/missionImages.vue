@@ -103,6 +103,7 @@ const toggleImageSelection = (img_src) => {
         <img class="rounded-lg"
           :src="selectedImage"
           alt="Selected Mission Image"
+          loading="lazy"
         />
       </div>
     </div>
