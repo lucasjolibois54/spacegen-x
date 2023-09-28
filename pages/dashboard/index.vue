@@ -90,7 +90,8 @@ onMounted(async () => {
             
             <!-- Reports Table -->
             <div class="overflow-x-auto">
-                <table class="min-w-full  rounded-md shadow-sm">
+               
+                  <table v-if="reports && reports.length > 0" class="min-w-full rounded-md shadow-sm">
                     <thead>
                         <tr class=" font-light text-left text-dark-data-title border-b border-dark-btn-border">
                             <th class="px-4 py-2">ID</th>
@@ -121,6 +122,9 @@ onMounted(async () => {
                         </tr>
                     </tbody>
                 </table>
+                <p v-else class="text-white mt-6">
+        You have no reports available, create your first report now!
+    </p>
             </div>
         </div>
     </div>
